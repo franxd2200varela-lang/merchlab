@@ -1,38 +1,46 @@
-import React from "react";
-
-export default function Home() {
+export default function Home(){
   return (
-    <section className="py-8">
-      <div className="rounded-2xl overflow-hidden border">
-        <div className="grid gap-8 p-8">
+    <>
+      {/* HERO */}
+      <section className="section">
+        <div className="hero">
           <div>
-            <h1 className="text-3xl font-extrabold">Llevá tu marca a otro nivel</h1>
-            <p className="text-gray-600 mt-2">
-              Vos elegís el producto, nosotras lo personalizamos ✨
-            </p>
-            <div className="flex gap-2 mt-4">
-              <a className="px-4 py-2 rounded-full border" href="/catalogo">Ver catálogo</a>
-              <a className="px-4 py-2 rounded-full border" href="/combos">Ver combos</a>
+            <div style={{letterSpacing:1, color:'#6b7280', fontWeight:600}}>MERCHANDISING &amp; REGALOS</div>
+            <h1>Llevá tu marca a otro nivel</h1>
+            <p>Vos elegís el producto, <strong>nosotras lo personalizamos</strong>.</p>
+            <div style={{display:'flex', gap:12}}>
+              <a className="btn btn--primary" href="/catalogo">Ver catálogo</a>
+              <a className="btn btn--ghost" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
             </div>
           </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <a href="/combos" className="rounded-xl border p-5 hover:bg-gray-50">
-              <h3 className="font-semibold">Combos listos para cotizar</h3>
-              <p className="text-sm text-gray-600 mt-1">
-                Elegí productos y cantidades, y cotizá por WhatsApp.
-              </p>
-            </a>
-
-            <a href="/servicio-paginas-web" className="rounded-xl border p-5 hover:bg-gray-50">
-              <h3 className="font-semibold">También hacemos páginas web</h3>
-              <p className="text-sm text-gray-600 mt-1">
-                Sitios rápidos, lindos y listos para convertir.
-              </p>
-            </a>
+          <div className="center">
+            <div className="bubble" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* CATEGORÍAS */}
+      <section className="section">
+        <h2 style={{fontSize:28, margin:'0 0 16px'}}>Categorías destacadas</h2>
+        <div className="grid-3">
+          {[1,2,3].map((n)=>(
+            <article className="card" key={n}>
+              <div className="center" style={{padding:24}}>
+                <div className="bubble" style={{
+                  maxWidth:360, background: n===1
+                    ? 'radial-gradient(closest-side,#cffafe,#ecfeff)'
+                    : n===2 ? 'radial-gradient(closest-side,#e9d5ff,#faf5ff)'
+                    : 'radial-gradient(closest-side,#fef9c3,#fffbeb)'
+                }}/>
+              </div>
+              <div className="card-body">
+                <h3>{n===1?'Vasos, mugs & botellas': n===2?'Bolsos y mochilas':'Escritura'}</h3>
+                <div className="meta">Ver productos</div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
