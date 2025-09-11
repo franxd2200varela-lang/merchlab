@@ -20,4 +20,3 @@ NEXT_PUBLIC_OWNER_EMAILS=varelafranciscoq@gmail.com
 
 ## 4) Notas
 - Panel Admin protegido por email (sin ABM aún). Luego podemos sumar BD, storage y panel completo.
-- toche toche
