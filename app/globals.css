@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos mínimos (podés ajustarlos) */
+@import "tailwindcss";
+
+/* Opcional: estilos mínimos globales */
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111827;
 }
 
+/* Remueve subrayado en links si quieres */
 a { text-decoration: none; }
