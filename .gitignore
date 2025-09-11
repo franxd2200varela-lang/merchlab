@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.vercel/
+
+# logs
+*.log
+
+# env
+.env
+.env.*
+!.env.example
+
+# editor
+.vscode/
+.DS_Store

@@ -1,0 +1,45 @@
+{
+  "name": "merchlab-host-ready",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "next telemetry disable"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.13",
+    "typescript": "5.5.4"
+  },
+  "description": "- Crear proyecto en https://supabase.com - Copiar `Project URL` y `anon public key` - Auth → Providers → Email: habilitar Email/Password - Auth → Users → Add user: **varelafranciscoq@gmail.com** con contraseña (auto-confirm)",
+  "main": "postcss.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franxd2200varela-lang/merchlab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franxd2200varela-lang/merchlab/issues"
+  },
+  "homepage": "https://github.com/franxd2200varela-lang/merchlab#readme"
+}
