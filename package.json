@@ -15,12 +15,9 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "20.12.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.21",
-    "tailwindcss": "^4.1.13",
     "typescript": "5.5.4"
   },
   "description": "- Crear proyecto en https://supabase.com - Copiar `Project URL` y `anon public key` - Auth → Providers → Email: habilitar Email/Password - Auth → Users → Add user: **varelafranciscoq@gmail.com** con contraseña (auto-confirm)",
