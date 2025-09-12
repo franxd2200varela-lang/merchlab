@@ -1,16 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import "tailwindcss";
-
-/* Opcional: estilos mínimos globales */
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #ffffff;
-  color: #111827;
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #0ea5a3;        /* verde menta */
+  --primary-ink: #073b3a;
+  --chip: #f3f4f6;           /* gris suave chips */
+  --card: #f7fbfd;           /* base panel hero */
+  --ring: rgba(14,165,163,.25);
+  --radius: 16px;
 }
 
-/* Remueve subrayado en links si quieres */
-a { text-decoration: none; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.chips{display:flex;gap:8px;align-items:center}
+.chip{background:var(--chip);border-radius:999px;padding:10px 16px;display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb}
+.btn{border-radius:999px;padding:12px 18px;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--primary);color:white}
+.btn-ghost{background:var(--chip);color:var(--text);}
+
+.card{background:var(--card);border-radius:var(--radius);border:1px solid #eef2f7}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;padding:28px}
+.hero-bubble{
+  width:100%;aspect-ratio:1/1;border-radius:9999px;
+  background: radial-gradient(120px 120px at 50% 50%, rgba(14,165,163,.18), rgba(14,165,163,0));
+  border:1px solid #e9eef4;
+}
+h1{font-size:48px;line-height:1.05;margin:12px 0 8px}
+h2{font-size:24px;margin:24px 0 12px}
+.muted{color:var(--muted)}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.75);backdrop-filter: blur(10px);border-bottom:1px solid #eef2f7;z-index:50}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px}
+.nav-links{display:flex;gap:10px;align-items:center}
+.badge{display:inline-flex;min-width:22px;height:22px;border-radius:999px;background:var(--primary);color:white;align-items:center;justify-content:center;font-size:12px;padding:0 6px}

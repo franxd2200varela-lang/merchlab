@@ -1,19 +1,15 @@
-import Script from "next/script";
-import "./globals.css";
-export const metadata = {
-  title: "MerchLab",
-  description: "Merchandising personalizado",
-};
+import Header from '@/components/Header'
+import { CartProvider } from '../lib/cart'
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({children}:{children:React.ReactNode}){
   return (
     <html lang="es">
-      <head>
-        <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
-      </head>
       <body>
-        {children}
+        <Header />
+        <CartProvider>
+          <main className="container">{children}</main>
+        </CartProvider>
       </body>
     </html>
-  );
+  )
 }
